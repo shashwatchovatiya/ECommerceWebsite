@@ -28,13 +28,9 @@ const Menu = [
         name: "Mens Wear",
         link: "/#",
     },
+
     {
         id: 5,
-        name: "Women Wear",
-        link: "/#",
-    },
-    {
-        id: 6,
         name: "Electronics",
         link: "/#",
     },
@@ -69,7 +65,7 @@ export default function Navbar() {
             <div className="bg-primary/40 py-2 ">
                 <div className="container flex justify-between items-center">
                     <div className="">
-                        <a href="" className='flex gap-2 font-bold text-2xl sm:text-3xl items-center'>
+                        <a href="" className='flex sm:gap-2 gap-1 font-bold text-lg sm:text-3xl items-center'>
                             <img src={logo} alt="Logo" className='w-10 ' />
                             Shopsy
                         </a>
@@ -77,12 +73,12 @@ export default function Navbar() {
 
 
                     {/* Searchbar */}
-                    <div className="flex gap-4 ">
+                    <div className="flex sm:gap-4 ">
                         <div className="relative  group sm-block">
                             <input
                                 type="text"
-                                placeholder='Searchbar'
-                                className='w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary'
+                                placeholder='Search'
+                                className='w-[100px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary'
                             />
                             <IoMdSearch className='text-gray-400 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3' />
                         </div>
@@ -131,7 +127,7 @@ export default function Navbar() {
                             </span>
                         </a>
                         
-                        <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md   ">
+                        <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md   ">
                             <ul>
                                 {
                                     DropdownLinks.map((data) => (
