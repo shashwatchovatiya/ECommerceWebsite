@@ -19,8 +19,8 @@ export default function Email() {
                
                 </h1>
                 <input 
-                    className='w-full mx-auto p-2'
-                    type="text" 
+                    className='w-full mx-auto p-3 text-black outline-none'
+                    type="email" 
                     data-aos="fade-up" 
                     placeholder='Enter Your Email Id' />
             </div>
