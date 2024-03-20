@@ -29,7 +29,8 @@ export default function Hero() {
     var setting = {
         dots: false,
         arrows: false,
-        infintie: true,
+        // infintie: true,
+        infinite: true, // Corrected typo here
         speed: 800,
         slidesToScroll: 1,
         autoplay: true,
@@ -49,7 +50,7 @@ export default function Hero() {
             <div className="container pb-8 sm:pb-0">
                 <Slider {...setting}>
                     {ImageList.map((data) => (
-                        <div className="">
+                        <div className="" key={data.id}>
                             <div className="grid grid-cols-1 sm:grid-cols-2">
                                 {/* Text Content Section  */}
                                 <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10x">

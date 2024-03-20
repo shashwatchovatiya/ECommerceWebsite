@@ -1,30 +1,34 @@
 import React from 'react'
 import Slider from 'react-slick'
+import image1 from '../../assets/Test/1.jpg'
+import image2 from '../../assets/Test/2.jpg'
+import image3 from '../../assets/Test/3.jpg'
+import image4 from '../../assets/Test/4.jpg'
 
 const  TestimonialsData = [
     {
         id:1,
         name :'James',
         text : ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique saepe repellendus cum voluptatem numquam amet est rem enim recusandae quod.',
-        img : 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        img : image1
     },
     {
         id:2,
         name :'Elizabeth',
         text : ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique saepe repellendus cum voluptatem numquam amet est rem enim recusandae quod.',
-        img : 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D'
+        img : image2
     },
     {
         id:3,
         name :'Thomas',
         text : ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique saepe repellendus cum voluptatem numquam amet est rem enim recusandae quod.',
-        img : 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww'
+        img : image3
     },
     {
         id:4,
         name :'Amelia',
         text : ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique saepe repellendus cum voluptatem numquam amet est rem enim recusandae quod.',
-        img : 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D'
+        img : image4
     },
 ]
 // 
@@ -79,23 +83,25 @@ export default function Testimonials() {
                 </div>
 
                 {/* Body Section  */}
-                <div className=" ">
+                <div>
                     <Slider {...settings}>
                         {
                             TestimonialsData.map((data)=>(
-                                <div 
+                               <div className="">
+                                 <div 
                                     key={data.id}
-                                    className="flex flex-col  gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl"
+                                    className="flex Shashwat gap-10 shadow-lg py-8 px-6 mx-4 rounded-xl bg-pink-200"
                                 > 
                                     <div className="">
-                                        <img src={data.img} alt="Internet is not connect" className='w-[80px] h-[80px] object-cover rounded-full' />
+                                        <img src={data.img} alt="Internet is not connect" className='w-[180px] h-[50px] object-cover rounded-full' />
                                     </div>
                                     <div className="">
                                         <p className='text-sm'>{data.text}</p>
                                         <h1 className='text-2xl font-semibold'>{data.name}</h1>
                                     </div>
                                 </div>
-                               
+                           
+                               </div>
                             ))
                         }
                     </Slider>
